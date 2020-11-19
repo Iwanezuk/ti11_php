@@ -51,7 +51,9 @@ $totalRows  = ($lista)->num_rows;
                 <td><?php echo $row['descri_produto']; ?></td>
                 <td><?php echo $row['resumo_produto']; ?></td>
                 <td><?php echo $row['valor_produto']; ?></td>
-                <td><?php echo $row['imagem_produto']; ?></td>
+                <td>
+                    <img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px">
+                </td>
                 <td>ALTERAR|EXCLUIR</td>
             </tr>
             <?php } while ($row = $lista->fetch_assoc()); ?>
