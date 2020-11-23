@@ -2,6 +2,51 @@
 // Incluir o arquivo e fazer a conexão com o banco
 include("../Connections/conn_produtos.php");
 
+if($_POST){
+    // Definindo o USE do banco de dados
+    mysqli_select_db($conn_produtos,$database_conn);
+        
+    // Variáveis para acrescentar dados ao banco
+    $tabela_insert  =   "tbprodutos";
+    $campos_insert  =   "id_tipo_produto, destaque_produto, descri_produto, resumo_produto, valor_produto, imagem_produto";
+    
+    // Guardo o nome da imagem no banco e o arquivo no diretório
+    if(isset($_POST['enviar'])){
+        $nome_img   =   $_FILES['imagem_produto']['name'];
+        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
+    
+    // Receber os dados do formulário
+    // Organize os campos na mesma ordem
+    $id_tipo_produto    =   $_POST['id_tipo_produto'];
+    $destaque_produto   =   $_POST['destaque_produto'];
+    $descri_produto     =   $_POST['descri_produto'];
+    $resumo_produto     =   $_POST['resumo_produto'];
+    $valor_produto      =   $_POST['valor_produto'];
+    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+    
+    // Reunir os valores a serem inseridos
+    $valores_insert     =   "'$id_tipo_produto','$destaque_produto','$descri_produto','$resumo_produto','$valor_produto','$imagem_produto'";
+    
+    // Consulta SQL para inserção dos dados
+    $insertSQL  =   "INSERT INTO ".$tabela_insert."
+                        (".$campos_insert.")
+                    VALUES
+                        (".$valores_insert.")
+                    ";
+    $resultado  =   $conn_produtos->query($insertSQL);
+    
+    // Após a ação a página será redirecionada
+    $destino    =   "produtos_lista.php";
+    if(mysqli_insert_id($conn_produtos)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };    
+};
+
 // Definindo o USE do banco de dados
 mysqli_select_db($conn_produtos,$database_conn);
 // Selecionar os dados da chave estrangeira
@@ -42,7 +87,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
     <!-- Abre thumbnail -->
     <div class="thumbnail">
        <div class="alert alert-danger" role="alert">
-          <form action="" id="form_produto_insere" name="form_produto_insere" method="post" enctype="multipart/form-data">
+          <form action="produtos_insere.php" id="form_produto_insere" name="form_produto_insere" method="post" enctype="multipart/form-data">
           
            <!-- Select id_tipo_produto -->
             <label for="id_tipo_produto">Tipo:</label>
