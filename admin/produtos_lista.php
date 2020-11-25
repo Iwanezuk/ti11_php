@@ -102,6 +102,21 @@ $totalRows  = ($lista)->num_rows;
 <!-- Link arquivos Bootstrap js -->        
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+
+<!-- Script para o Modal -->
+<script type="text/javascript">
+    $('.delete').on('click',function(){
+        var nome    =  $(this).data('nome');
+        // buscar o valor do atributo data-nome
+        var id      =  $(this).data('id');
+        // buscar o valor do atributo data-id
+        $('span.nome').text(nome);
+        // Inserir o nome do item na confirmação do Modal
+        $('a.delete-yes').attr('href','produtos_exclui.php?id_produto='+id);
+        // Enviar o id através do link do botão confirmar
+        $('#myModal').modal('show'); //Abre o modal
+    });
+</script>
 </body>
 </html>
 <?php mysqli_free_result($lista); ?>
