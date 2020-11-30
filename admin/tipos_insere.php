@@ -45,9 +45,9 @@ if($_POST){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <!-- Link para CSS específico -->
-
+<link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
 </head>
-<body>
+<body class="fundofixo">
 <main class="container">
 <div class="row">
 <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><!-- dimensionamento -->
