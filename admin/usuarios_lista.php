@@ -19,6 +19,7 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="utf-8">
 </head>
 <body>
+   <?php include "menu_adm.php"; ?>
     <main>
         <h1>Lista de Usuários</h1>
         <table border="1">
