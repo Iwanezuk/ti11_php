@@ -35,7 +35,7 @@ $totalRows  =   ($lista)->num_rows;
        <!-- thead>tr>th*4 -->
        <thead><!-- cabeçalho da tabela -->
            <tr>
-               <th>ID</th><!-- cabeça da coluna -->
+               <th class="hidden">ID</th><!-- cabeça da coluna -->
                <th>SIGLA</th>
                <th>RÓTULO</th>
                 <th>
@@ -52,7 +52,7 @@ $totalRows  =   ($lista)->num_rows;
           <?php do { ?>
            <tr><!-- linha da tabela -->
               <!-- Insira os dados determinando a linha e o campo -->
-               <td><?php echo $row['id_tipo']; ?></td>
+               <td class="hidden"><?php echo $row['id_tipo']; ?></td>
                <td><?php echo $row['sigla_tipo']; ?></td>
                <td><?php echo $row['rotulo_tipo']; ?></td>
                <td>
