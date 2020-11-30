@@ -27,6 +27,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <!-- body>main>h1 -->
 <body>
+<?php include "menu_adm.php"; ?>
 <main>
     <h1>Lista de Tipos</h1>
     <table border="1">
