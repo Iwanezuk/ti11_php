@@ -79,7 +79,7 @@ $totalRows  = ($lista)->num_rows;
                     <img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px">
                 </td>
                 <td>
-                    <a href="" class="btn btn-warning btn-block btn-xs">
+                    <a href="produtos_atualiza.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-warning btn-block btn-xs">
                         <span class="hidden-xs">ALTERAR<br></span>
                         <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
                     </a>
