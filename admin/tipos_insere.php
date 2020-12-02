@@ -48,6 +48,7 @@ if($_POST){
 <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
 </head>
 <body class="fundofixo">
+<?php include "menu_adm.php"; ?>
 <main class="container">
 <div class="row">
 <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><!-- dimensionamento -->
