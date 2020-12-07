@@ -1,4 +1,4 @@
-<!-- Salvar como: produtos_geral.php -->
+<!-- Salvar como: produto_detalhe.php -->
 <?php
 // Incluir arquivo para fazer a conexão
 include ("Connections/conn_produtos.php");
@@ -29,6 +29,7 @@ $totalRows  =   ($lista)->num_rows;
 <link href="css/meu_estilo.css" rel="stylesheet" type="text/css">
 </head>
 <body class="fundofixo">
+<?php include("menu_publico.php"); ?>
 <main class="container">
 <h2 class="breadcrumb alert-danger">
    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
