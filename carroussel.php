@@ -40,8 +40,7 @@
    <a href="#banners" class="right carousel-control" role="button" data-slide="next">
        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
        <span class="sr-only">Próximo</span>
-   </a>
-    
+   </a>  
 </div><!-- fecha carousel -->
 <!-- Link arquivos Bootstrap js -->
 <!-- CÓDIGO DESABILITADO PARA NÃO HAVER CONFLITOS       
