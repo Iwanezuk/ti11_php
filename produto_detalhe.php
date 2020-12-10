@@ -69,6 +69,10 @@ $totalRows  =   ($lista)->num_rows;
 <!-- Fecha estrutura de repetição --> 
 </div><!-- fecha row -->
 
+<!-- RODAPÉ -->
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
 
 </main>
 <!-- Link arquivos Bootstrap js -->
