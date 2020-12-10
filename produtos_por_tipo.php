@@ -31,6 +31,7 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include('menu_publico.php'); ?>
 <main class="container">
+<?php //include('carroussel.php'); ?>
 <!-- Mostrar se os registros retornarem VAZIOS -->
 <?php if($totalRows == 0){ ?>
     <h2 class="breadcrumb alert-danger">
@@ -89,6 +90,10 @@ $totalRows  =   ($lista)->num_rows;
 
 <?php }; ?>
 <!-- Fecha Registros NÃO Vazios -->
+<!-- RODAPÉ -->
+<footer>
+    <?php include('rodape.php'); ?>
+</footer>
 
 </main>
 <!-- Link arquivos Bootstrap js -->
